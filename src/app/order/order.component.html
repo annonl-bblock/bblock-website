@@ -1,0 +1,24 @@
+<h1 id="tableLabel">Список брони</h1>
+
+<p *ngIf="!bookings"><em>Loading...</em></p>
+
+<table class="table table-striped" aria-labelledby="tableLabel" *ngIf="bookings">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Room Id</th>
+      <th>Дата бронирования</th>
+      <th>Дата заезда</th>
+      <th>Дата выезда</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let booking of bookings">
+      <td>{{ booking.id }}</td>
+      <td>{{ booking.roomId }}</td>
+      <td>{{ booking.bookingDate }}</td>
+      <td>{{ booking.checkInDate }}</td>
+      <td>{{ booking.checkOutDate }}</td>
+    </tr>
+  </tbody>
+</table>

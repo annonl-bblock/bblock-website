@@ -1,0 +1,49 @@
+<h2 mat-dialog-title>Просмотр типа номера</h2>
+<mat-dialog-content class="mat-typography mat">
+  <form autocomplete="off" disabled>
+    <div>
+      <mat-form-field class="w-100" required>
+        <mat-label>Название номера</mat-label>
+        <input matInput disabled [(ngModel)]="name" [ngModelOptions]="{standalone: true}">
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field class="w-100" required>
+        <mat-label>Описание</mat-label>
+        <input matInput disabled [(ngModel)]="description" [ngModelOptions]="{standalone: true}">
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field class="w-100" required>
+        <mat-label>Вместимость</mat-label>
+        <input type="number" disabled matInput [(ngModel)]="capacity" [ngModelOptions]="{standalone: true}">
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field class="w-100" required>
+        <mat-label>Площадь номера</mat-label>
+        <input type="number" disabled placeholder="0" matInput [(ngModel)]="square" [ngModelOptions]="{standalone: true}">
+      </mat-form-field>
+    </div
+    >
+    <div>
+      <mat-form-field class="w-100" required>
+        <mat-label>Цена</mat-label>
+        <input type="number" disabled matInput [(ngModel)]="price" [ngModelOptions]="{standalone: true}">
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field class="w-100 h-100" required>
+        <mat-label>Ссылки на изображения</mat-label>
+        <textarea rows="5" disabled matInput [(ngModel)]="images" [ngModelOptions]="{standalone: true}"></textarea>
+      </mat-form-field>
+    </div>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Отмена</button>
+</mat-dialog-actions>

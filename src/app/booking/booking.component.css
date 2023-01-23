@@ -1,0 +1,40 @@
+.booking-panel {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  overflow: auto;
+  text-align: center;
+}
+
+.counter-module {
+  max-width: 200px;
+  max-height: 80px;
+  text-align: center;
+  display: inline-block;
+  vertical-align: top;
+  font-size: smaller;
+  margin-left: 100px;
+}
+
+.counter-title {
+  font-size:smaller;
+  margin-bottom: 0;
+}
+
+.counter {
+  padding: 0 -10px 0 -10px;
+}
+
+.find-button {
+  font-size: x-large;
+  margin: auto;
+  width: 50%;
+  border: 3px solid green;
+  padding: 10px;
+  border-color: #98b8c7;
+}

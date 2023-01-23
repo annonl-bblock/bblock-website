@@ -1,0 +1,25 @@
+.cont {
+  zoom: 1;
+}
+
+.cont:before,
+.cont:after {
+  content: " ";
+  display: table;
+}
+
+.cont:after {
+  clear: both;
+}
+
+.menu {
+  float: left;
+  display:inline-table;
+
+}
+
+.content {
+  float: right;
+  display:inline-table;
+  width: 90%;
+}

@@ -1,0 +1,31 @@
+<h2 mat-dialog-title>Изменение номера</h2>
+<mat-dialog-content class="mat-typography mat">
+  <form autocomplete="off">
+    <div>
+      <mat-form-field required>
+        <mat-label>Номер комнаты</mat-label>
+        <input matInput [(ngModel)]="numberRoom" [ngModelOptions]="{standalone: true}">
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field required>
+        <mat-label>Этаж</mat-label>
+        <input matInput [(ngModel)]="floor" [ngModelOptions]="{standalone: true}">
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field required>
+        <mat-label>Тип номера</mat-label>
+        <mat-select [(ngModel)]="typeRoomId" id="typeRoom">
+          <mat-option *ngFor="let type of typesRoom" [value]="type.id">{{type.name}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Отмена</button>
+  <button mat-button [mat-dialog-close]="returnValue()" cdkFocusInitial>Сохранить изменения</button>
+</mat-dialog-actions>

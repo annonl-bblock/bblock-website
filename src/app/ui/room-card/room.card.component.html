@@ -1,0 +1,25 @@
+<mat-card *ngFor="let room of rooms; index as i">
+  <mat-card-header>
+    <mat-card-title>{{room.name}}</mat-card-title>
+    <mat-card-subtitle>{{room.description}}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="row">
+      <app-carousel [images]="room.images" small class="col-6 car"></app-carousel>
+      <div class="col-auto">
+        <h2>Описание номера</h2>
+        <p>Цена: {{room.price}} &#8381;</p>
+        <p>Вместимость номера: {{room.capacity}}</p>
+        <p>Площадь: {{room.square}} м&#178;</p>
+      </div>
+    </div>
+
+
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button>Забронировать</button>
+  </mat-card-actions>
+</mat-card>
+
+
+

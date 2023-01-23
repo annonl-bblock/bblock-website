@@ -1,0 +1,33 @@
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+  text-decoration: none;
+}
+
+.header-brand {
+  color: white;
+  text-transform: uppercase;
+  max-width: 50px;
+}
+
+.nav-header {
+  background-color: #8FB9C9;
+}
+
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+.mat-form-field + .mat-form-field {
+  margin-left: 8px;
+}

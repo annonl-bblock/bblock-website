@@ -1,0 +1,9 @@
+
+    <div>
+      <div class="col-2 admin-menu">
+        <nav mat-tab-nav-bar>
+          <a class="admin-menu-link" mat-tab-link  [routerLink]="[link.route]" *ngFor="let link of links">{{link.label}}</a>
+        </nav>
+      </div>
+    </div>
+

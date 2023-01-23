@@ -1,0 +1,16 @@
+<mat-card *ngFor="let room of rooms;" class="room-card">
+  <mat-card-content class="row">
+    <div class="row">
+      <div class="col-md-3">
+        <img mat-card-image class="example-header-image" src={{room.image}} alt="Номер">
+      </div>
+      <div class="col-md-9">
+        <mat-card-title>{{room.name}}</mat-card-title>
+        <mat-card-subtitle>{{room.description}}</mat-card-subtitle>
+        <mat-card-actions class="more-button">
+          <button mat-button [routerLink]="['/room', room.id]">Подробнее</button>
+        </mat-card-actions>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>

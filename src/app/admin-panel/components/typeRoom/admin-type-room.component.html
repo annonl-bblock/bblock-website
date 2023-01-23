@@ -1,0 +1,25 @@
+<div class="cont">
+
+  <app-admin-menu class="menu"></app-admin-menu>
+  <div class="content">
+    <button mat-button color="primary" (click)="openCreateDialog()">Добавить номер</button>
+    <mat-card *ngFor="let room of typesRoom;">
+      <mat-card-content class="row">
+        <div class="row">
+          <div class="col-md-3">
+            <img mat-card-image class="example-header-image" src={{room.images[0]}} alt="Номер">
+          </div>
+          <div class="col-md-9">
+            <mat-card-title>{{room.name}}</mat-card-title>
+            <mat-card-subtitle>{{room.description}}</mat-card-subtitle>
+            <mat-card-footer></mat-card-footer>
+            <button mat-button color="primary"  href="" (click)="openShowDialog(room)"><mat-icon>visibility</mat-icon></button>
+            <button mat-button color="primary" href="" (click)="openUpdateDialog(room)"><mat-icon>create</mat-icon></button>
+            <button mat-button color="warn" (click)="openDeleteDialog(room)" href=""><mat-icon>delete</mat-icon></button>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+

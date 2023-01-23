@@ -1,0 +1,20 @@
+<ng-container>
+  <mat-card *ngFor="let guest of bookings;">
+    <mat-card-content class="row">
+      <div class="row">
+        <div class="col-md-3">
+          <img mat-card-image class="example-header-image" src={{guest.images[0]}} alt="Номер">
+        </div>
+        <div class="col-md-9">
+          <mat-card-title>{{guest.name}}</mat-card-title>
+          <mat-card-subtitle>{{guest.description}}</mat-card-subtitle>
+          <mat-card-footer></mat-card-footer>
+          <button mat-button color="primary"  href=""><mat-icon>visibility</mat-icon></button>
+          <button mat-button color="primary" href="" (click)="openUpdateDialog(guest)"><mat-icon>create</mat-icon></button>
+          <button mat-button color="warn" (click)="openDeleteDialog(guest)" href=""><mat-icon>delete</mat-icon></button>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</ng-container>
+

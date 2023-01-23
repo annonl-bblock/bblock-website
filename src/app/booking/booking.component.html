@@ -1,0 +1,37 @@
+<h1>Бронирование</h1>
+
+<div class="booking-panel">
+  <mat-list>
+    <h3>Выберите даты заезда, выезда и количество гостей</h3>
+    <mat-divider></mat-divider>
+    <mat-form-field appearance="fill">
+      <mat-label>Дата заезда и выезда</mat-label>
+      <mat-date-range-input [rangePicker]="check_picker" [dateFilter]="filterDate">
+        <input matStartDate [(ngModel)]="startDay" placeholder="Дата заезда">
+        <input matEndDate [(ngModel)]="endDay" placeholder="Дата выезда">
+      </mat-date-range-input>
+      <mat-datepicker-toggle matSuffix [for]="check_picker"></mat-datepicker-toggle>
+      <mat-date-range-picker #check_picker disabled="false"></mat-date-range-picker>
+    </mat-form-field>
+    <mat-card class="counter-module">
+      <mat-card-title class="counter-title">Взрослые</mat-card-title>
+      <br/>
+      <button [disabled]="isDisabledDec" mat-button (click)="decrement()">-</button>
+      <span class="counter" aria-live="polite"><strong>{{ currentCount }}</strong></span>
+      <button [disabled]="isDisabledInc" mat-button (click)="increment()">+</button>
+    </mat-card>
+
+    <mat-card class="counter-module">
+      <mat-card-title class="counter-title">Дети (до 13 лет)</mat-card-title>
+      <br />
+      <button [disabled]="isDisabledDecChild" mat-button (click)="decrementChild()">-</button>
+      <span class="counter" aria-live="polite"><strong>{{ currentCountChild }}</strong></span>
+      <button [disabled]="isDisabledIncChild" mat-button (click)="incrementChild()">+</button>
+    </mat-card>
+    <mat-divider></mat-divider>
+    <br/>
+    <button mat-button class="find-button" (click)="sendRequest()">Найти</button>
+  </mat-list>
+</div>
+
+<app-booking-search></app-booking-search>

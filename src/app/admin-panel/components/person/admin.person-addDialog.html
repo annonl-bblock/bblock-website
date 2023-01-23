@@ -1,0 +1,54 @@
+<div class="w-100">
+  <h2 mat-dialog-title>Создание нового типа номера</h2>
+  <mat-dialog-content class="mat-typography mat">
+    <form autocomplete="off">
+      <div>
+        <mat-form-field class="w-100" required>
+          <mat-label>Название номера</mat-label>
+          <input matInput [(ngModel)]="name" [ngModelOptions]="{standalone: true}">
+        </mat-form-field>
+      </div>
+
+      <div>
+        <mat-form-field class="w-100" required>
+          <mat-label>Описание</mat-label>
+          <input matInput [(ngModel)]="description" [ngModelOptions]="{standalone: true}">
+        </mat-form-field>
+      </div>
+
+      <div>
+        <mat-form-field class="w-100" required>
+          <mat-label>Вместимость</mat-label>
+          <input type="number" matInput [(ngModel)]="capacity" [ngModelOptions]="{standalone: true}">
+        </mat-form-field>
+      </div>
+
+      <div>
+        <mat-form-field class="w-100" required>
+          <mat-label>Площадь номера</mat-label>
+          <input type="number" placeholder="0" matInput [(ngModel)]="square" [ngModelOptions]="{standalone: true}">
+        </mat-form-field>
+      </div
+      >
+      <div>
+        <mat-form-field class="w-100" required>
+          <mat-label>Цена</mat-label>
+          <input type="number" matInput [(ngModel)]="price" [ngModelOptions]="{standalone: true}">
+        </mat-form-field>
+      </div>
+
+      <div>
+        <mat-form-field class="w-100 h-100" required>
+          <mat-label>Ссылки на изображения</mat-label>
+          <textarea rows="5" matInput [(ngModel)]="imagesString" [ngModelOptions]="{standalone: true}"></textarea>
+        </mat-form-field>
+      </div>
+    </form>
+
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Отмена</button>
+    <button mat-raised-button color="primary" [mat-dialog-close]="returnValue()" cdkFocusInitial>Создать</button>
+  </mat-dialog-actions>
+
+</div>

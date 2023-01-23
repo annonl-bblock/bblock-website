@@ -1,0 +1,19 @@
+.room-card {
+  max-width: 100vw;
+  margin-bottom: 5vh;
+}
+
+.example-header-image {
+  max-width: 20vw;
+  margin: 0;
+}
+
+.more-button {
+  margin-bottom: 0;
+  bottom: 0;
+  padding-bottom: 0;
+}
+
+
+
+

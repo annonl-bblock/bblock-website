@@ -1,0 +1,35 @@
+<ul class="navbar-nav" *ngIf="isAuthenticated">
+
+  <li class="nav-item">
+    <div class="dropdown">
+      <button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+        {{ userName | async }}
+      </button>
+      <form class="dropdown-menu p-2">
+        <div class="mb-3">
+          <h3>Личный кабинет</h3>
+          <p>{{ userName | async }}</p>
+        </div>
+        <div class="dropdown-divider"></div>
+        <div class="mb-3">
+          <div>
+            <a class="nav-link" [routerLink]='["/auth/profile"]' title="Manage">Настройки</a>
+            <a class="nav-link" [routerLink]='["/auth/logout"]' [state]='{ local: true }' title="Logout">Выход</a>
+          </div>
+        </div>
+        <div class="dropdown-divider"></div>
+        <div class="mb-3">
+          <a class="nav-link text-dark" [routerLink]="['/orders']">Мои бронирования</a>
+        </div>
+      </form>
+    </div>
+  </li>
+</ul>
+<ul class="navbar-nav" *ngIf="(isAuthenticated) !== true">
+  <li class="nav-item">
+    <a class="nav-link text-dark" [routerLink]='["/auth/registration"]'>Регистрация</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link text-dark" [routerLink]='["/auth/login"]'>Вход</a>
+  </li>
+</ul>

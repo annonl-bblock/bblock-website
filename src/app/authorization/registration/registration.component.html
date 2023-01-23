@@ -1,0 +1,33 @@
+<h1>Регистарция</h1>
+
+<div class="row">
+  <div class="col-md-4">
+    <form [formGroup]="registrationGroup" novalidate method="post" autocomplete="off" (ngSubmit)="registration()">
+      <h2>Создайте новый акаунт.</h2>
+      <hr/>
+      <mat-form-field class="w-100" appearance="outline">
+        <mat-label>Email</mat-label>
+        <input type="email" matInput formControlName="emailFormControl" placeholder="pat@example.com">
+        <mat-error *ngIf="validateControl('emailFormControl')">
+          Пожалуйста, введите действительный адрес электронной почты
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="w-100" appearance="outline">
+        <mat-label>Пароль</mat-label>
+        <input matInput formControlName="passwordFormControl" type="password">
+        <mat-error *ngIf="validateControl('passwordFormControl')">Введите пароль</mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="w-100" appearance="outline">
+        <mat-label>Повторите пароль</mat-label>
+        <input matInput formControlName="confirmPasswordFormControl" type="password">
+        <mat-error *ngIf="validateControl('confirmPasswordFormControl')">Введите пароль</mat-error>
+      </mat-form-field>
+
+      <button id="registerSubmit" type="submit" class="w-100 btn btn-lg btn-primary" [disabled]="!registrationGroup.valid">
+        Зарегистрироваться
+      </button>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+.admin-menu-link {
+  display: block;
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.admin-menu {
+  background-color: #8FB9C9;
+}
+
